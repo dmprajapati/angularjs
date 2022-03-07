@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="main">
+
+<head>
+    <title>Angular: Copy</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="../script/function/function.js"></script>
+    <link href="function.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>Angular: Copy</h2>
+    <div class="main" >      
+        <div class="card" ng-controller="copy">
+
+            <form novalidate class="simple-form">
+                <label>Name: <input type="text" ng-model="user.name" /></label><br />
+                <label>Age:  <input type="number" ng-model="user.age" /></label><br />
+                Gender: <label>male<input type="radio" ng-model="user.gender" value="male" />
+                        <label>female<input type="radio" ng-model="user.gender" value="female" /></label><br />
+                <button ng-click="reset()">RESET</button>
+                <button ng-click="update(user)">SAVE</button>
+              </form>
+              <pre>form = {{user | json}}</pre>
+              <pre>leader = {{leader | json}}</pre>
+        </div> 
+    </div>
+</body>
+
+</html>

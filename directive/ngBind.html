@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="main">
+
+<head>
+    <title>Directive: a</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="../script/directive/directive.js "></script>
+    <link href="directive.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>Directive: a</h2>
+    <div class="main" >      
+        <div class="card" ng-controller="bind">
+            <label>Enter name: <input type="text" ng-model="name"></label><br>
+            Hello <span ng-bind="name"></span>!
+    </div>
+</body>
+
+</html>

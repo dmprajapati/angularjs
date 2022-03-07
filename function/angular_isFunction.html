@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="main">
+
+<head>
+    <title>Angular: IsFunction</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="../script/function/function.js"></script>
+    <link href="function.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>Angular: IsFunction</h2>
+    <div class="main" >      
+        <div class="card" ng-controller="isfunction">
+
+            {{demodate}} : {{isFunction(demodate)}}<br /><br />
+            {{demofunction}} : {{isFunction(demofunction)}}<br /><br />
+            {{demostring}} : {{isFunction(demostring)}}
+        </div> 
+    </div>
+</body>
+
+</html>

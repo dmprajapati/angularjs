@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="main">
+
+<head>
+    <title>Filter: LimitTo</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="../script/filter/empdata.js"></script>
+    <link href="filter.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>Filter: OrderBy | LimitTo | Uppercase | Lowercase</h2>
+   <div class="main">
+    
+    <div class="card" ng-controller="empData">
+        Row to Display: <input type="number" step="1" min="0" max="4" ng-model="rowLimit" />
+        Order By: <select ng-model="sortColumn">
+            <option value="name">Name</option>
+            <option value="dob">DOB</option>
+            <option value="gender">Gender</option>
+            <option value="-salary">Salary</option>
+        </select>
+        <table>
+            <thead>
+                <tr>
+                    <th ng-click="sortData('name')"> Name <div ng-click="getSortClass('name')"></div></th>
+                    <th ng-click="sortData('dob')">Birthday <div ng-click="getSortClass('dob')"></div></th>
+                    <th ng-click="sortData('gender')">Gender <div ng-click="getSortClass('gender')"></div></th>
+                    <th ng-click="sortData('salary')">Salary <div ng-click="getSortClass('salary')"></div></th>
+                    <th ng-click="sortData('salary')">Salary <div ng-click="getSortClass('salary')"></div></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- | orderBy: sortColumn  -->
+                <tr ng-repeat="employee in employees | limitTo: rowLimit | orderBy :sortColumn:reverseSort">
+                    <td>{{employee.name | uppercase}}</td>
+                    <td>{{employee.dob | date:"dd-MM-yyyy"}}</td>
+                    <td>{{employee.gender | lowercase}}</td>
+                    <td>{{employee.salary | number:2}}</td>
+                    <td>{{employee.salary | currency:"₹":1}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+   </div>
+</body>
+
+</html>

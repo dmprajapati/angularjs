@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="main">
+
+<head>
+    <title>Filter: Currency</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="../script/filter/date.js"></script>
+    <link href="filter.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>Filter Currency</h2>
+    <div class="main" >      
+        <div class="card">
+    
+  
+        <label>Enter Number</label>
+        <input type="number" ng-model="currencyNumber" placeholder="Enter Number">
+        <br />
+        <label>default currency format : {{ currencyNumber | currency}}</label>
+        <br/>
+        <label>custom currency format : {{ currencyNumber | currency:"₹"}}</label>
+        <br/>
+        <label>custom currency format with 0 fractions : {{ currencyNumber | currency:"₹":0}}</label>
+        <br/>
+        </div>  
+    </div>
+</body>
+
+</html>

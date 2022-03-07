@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="main">
+
+<head>
+    <title>Angular: Bind</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="../script/function/function.js"></script>
+    <link href="function.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>Angular: Bind</h2>
+    <div class="main" >      
+        <div class="card" ng-controller="bindController">
+
+            <input type="number" placeholder="Enter Number1" ng-model="num1" ng-change="bindDemo()" />
+            <input type="number" placeholder="Enter Number2" ng-model="num2" ng-change="bindDemo()" />
+             <br>Sum = {{Add}}
+    
+        </div> 
+    </div>
+</body>
+
+</html>

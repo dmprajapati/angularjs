@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="main">
+
+<head>
+    <title>filter: date</title>
+         <script src="../script/angular.min.js"></script>
+         <script src="../script/filter/date.js"></script>
+         <link href="filter.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>Filter Date</h2>
+    <div class="main">
+    <div class="card" ng-controller="date" >
+        <div style="display: flex; flex-direction: column;" ng-repeat="x in dates">
+            <label>Default Formate:  {{x.date}}</label>
+            <label> dd-MM-yyyy Formate: {{ x.date | date:'dd-MM-yyyy' }}</label>
+            <label> Medium Formate: {{ x.date | date:'medium' }}</label>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

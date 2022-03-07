@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="main">
+
+<head>
+    <title>Angular: IsDefined</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="../script/function/function.js"></script>
+    <link href="function.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>Angular: IsDefined</h2>
+    <div class="main" >      
+        <div class="card" ng-controller="isdefined">
+
+            {{demodate}} : {{isDefined(demodate)}}<br /><br />
+            {{demoempty}} : {{isDefined(demoempty)}}<br /><br />
+            {{demostring}} : {{isDefined(demostring)}}
+        </div> 
+    </div>
+</body>
+
+</html>

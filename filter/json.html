@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="main">
+
+<head>
+    <title>Filter: Json</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="../script/filter/date.js"></script>
+    <link href="filter.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>Filter Currency</h2>
+    <div class="main" >      
+        <div class="card">
+    
+            <pre>{{ {'name':'value'} | json }}</pre>
+            <pre>{{ {'name':'value'} | json:3 }}</pre>
+        </div>  
+    </div>
+</body>
+
+</html>

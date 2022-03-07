@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="main">
+
+<head>
+    <title>Filter: Search</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="../script/filter/search.js"></script>
+    <link href="filter.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>Filter Search</h2>
+    <div class="main">
+   
+    <div class="card" ng-controller="empData" style="display: flex; flex-direction: column;">
+        <input type="search" placeholder="Search by employee" ng-model="searchText.name">
+        <input type="search" placeholder="Search by DateofBirth" ng-model="searchText.dob">
+       <table>
+           <thead>
+               <tr>
+                   <th>Name </th>
+                   <th>Birthday </th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr ng-repeat="employee in employees | filter:searchText ">
+                   <td>{{employee.name | uppercase}}</td>
+                   <td>{{employee.dob | date:"dd-MM-yyyy"}}</td>
+               </tr>
+           </tbody>
+       </table>
+       </div>
+    </div>
+           
+</body>
+
+</html>

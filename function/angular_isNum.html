@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="main">
+
+<head>
+    <title>Angular: isNumber</title>
+    <script src="../script/angular.min.js"></script>
+    <script src="../script/function/function.js"></script>
+    <link href="function.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h2>Angular: isNumber</h2>
+    <div class="main" >      
+        <div class="card" ng-controller="isnum">
+
+            {{demodate}} : {{isNumber(demodate)}}<br /><br />
+            {{demonum}} : {{isNumber(demonum)}}<br /><br />
+            {{demostring}} : {{isNumber(demostring)}}
+        </div> 
+    </div>
+</body>
+
+</html>
